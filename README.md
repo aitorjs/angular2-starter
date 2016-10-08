@@ -20,10 +20,22 @@ npm start
 ## Forma rápida de hacer andar angular2 usando systemjs
 
 - mkdir angular2-starter-test && cd angular2-starter-test
-- Copiar 5 ficheros: *index.html*, *package.json*, system.config.js, tsconfig.json 
-y typings.json en angular2-starter-test
+- Copiar 5 ficheros: *index.html*, *package.json*, *system.config.js*, *tsconfig.json* 
+y *typings.json* en *angular2-starter-test*
 - npm install
 - npm start
 
 (Como no hay ningun aplicación creada en app/main.js dara un error. Con crear 
 ese fichero ts en app/main.ts y transpilarlo estaría todo funcionando)
+
+## Cosas
+
+class Greeter {
+  saySomething(message: string) {
+    console.log(message);
+  }  
+}
+
+var greeter = new Greeter();
+
+greeter.saySomething('hello');

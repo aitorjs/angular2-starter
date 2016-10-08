@@ -1,17 +1,4 @@
-/* const message = 'hello';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
 
-function saySomething(message: string = 'whats up') {
-    console.log(message);
-}
-
-saySomething(message); */
-
-class Greeter {
-  saySomething(message: string) {
-    console.log(message);
-  }  
-}
-
-var greeter = new Greeter();
-
-greeter.saySomething('hello');
+platformBrowserDynamic().bootstrapModule(AppModule);
