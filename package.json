@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\"",
     "lite": "lite-server",
-    "tsc": "tsc app/*.ts",
-    "tsc:w": "tsc -w app/*.ts",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
     "typings": "typings",
     "postinstall": "typings install"
   },
