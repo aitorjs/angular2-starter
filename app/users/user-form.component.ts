@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { User } from '../shared/models/user';
 
 @Component({
@@ -40,10 +40,13 @@ import { User } from '../shared/models/user';
 })
 
 export class UserFormComponent {
-  newUser: User = new User()
+  @Output() userCreated = new EventEmitter();
+  newUser: User = new User();
   active: boolean = true;
 
   onSubmit() {
+    // show the event that user was created
+    this.userCreated.emit({ user: this.newUser });
     console.log(this.newUser);
 
     this.newUser = new User();
